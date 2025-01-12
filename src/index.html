@@ -29,7 +29,7 @@
       <div class="container">
         <div class="header__top">
           <div class="header__logo">
-            <a href="/">
+            <a href="#">
               <img
                 src="./images/logo.svg"
                 alt="Logo"
@@ -169,7 +169,7 @@
           </div>
           <a
             href="#section-more"
-            class="header__bottom-more-btn"
+            class="more-btn"
           >
             More
           </a>
@@ -661,7 +661,7 @@
       </section>
       <div class="buy-btn">
         <a
-          href="#btn-buy"
+          href="#buy-now"
           class="buy-btn__content"
         >
           Buy Now
@@ -774,7 +774,7 @@
     <footer class="footer">
       <div class="footer__container container">
         <a
-          href="/"
+          href="#"
           class="footer__logo"
         >
           <img
@@ -821,10 +821,33 @@
         </div>
 
         <div class="footer__contacts-info">
-          <div class="footer__contacts-list">
-            <a href="tel:+86-0571-86105373">+86-0571-86105373</a>
-            <a href="mailto:global@katvr.com">global@katvr.com</a>
-            <a href="mailto:overseas@katvr.com">overseas@katvr.com</a>
+          <div class="contact-list--footer">
+            <ul class="contact-list__items">
+              <li class="contact-list__item">
+                <a
+                  class="contact-list__link"
+                  href="tel:+86-0571-86105373"
+                >
+                  +86-0571-86105373
+                </a>
+              </li>
+              <li class="contact-list__item">
+                <a
+                  class="contact-list__link"
+                  href="mailto:global@katvr.com"
+                >
+                  global@katvr.com
+                </a>
+              </li>
+              <li class="contact-list__item">
+                <a
+                  class="contact-list__link"
+                  href="mailto:overseas@katvr.com"
+                >
+                  overseas@katvr.com
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div class="footer__socials">
@@ -893,6 +916,691 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-help"
+      role="dialog"
+    >
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <h2 class="modal__title section-title">
+          HOW CAN WE
+          <span class="highlight">HELP</span>
+          YOU?
+        </h2>
+        <p class="modal-help__description">
+          Welcome to our help center. Our goal is to make the process of getting
+          acquainted and purchase as easy and pleasant as possible. Need help
+          with your KAT VR loco product? Many product questions can be resolved
+          by reviewing our Product Support
+          <a
+            href="#faq"
+            class="helper-links"
+          >
+            FAQs
+          </a>
+          .
+          <br />
+          <br />
+          Please also feel free to
+          <a
+            id="modal-contact-us"
+            href="#contact"
+            class="helper-links"
+          >
+            Contact Us
+          </a>
+          directly should you need anything further. We’re happy to help.
+        </p>
+
+        <div class="modal-help__support">
+          <div class="warranty-links">
+            <ul class="warranty-links__list">
+              <li class="warranty-links__item">
+                <a
+                  href="#instruction-manual"
+                  class="warranty-links__link helper-links"
+                >
+                  Instruction manual
+                </a>
+              </li>
+              <li class="warranty-links__item">
+                <a
+                  href="#warranty"
+                  class="warranty-links__link helper-links"
+                >
+                  Where to go for a warranty
+                </a>
+              </li>
+              <li class="warranty-links__item">
+                <a
+                  href="#service-policy"
+                  class="warranty-links__link helper-links"
+                >
+                  Service Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-help__support--contacts">
+            <div class="contact-list contact-list--help">
+              <ul class="contact-list__items contact-list__items--help">
+                <li class="contact-list__item">
+                  <a
+                    class="contact-list__link contact-list__link--help"
+                    href="tel:+86-0571-86105373"
+                  >
+                    +86-0571-86105373
+                  </a>
+                </li>
+                <li class="contact-list__item">
+                  <a
+                    class="contact-list__link contact-list__link--help"
+                    href="mailto:global@katvr.com"
+                  >
+                    global@katvr.com
+                  </a>
+                </li>
+                <li class="contact-list__item">
+                  <a
+                    class="contact-list__link contact-list__link--help"
+                    href="mailto:overseas@katvr.com"
+                  >
+                    overseas@katvr.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-faq"
+      role="dialog"
+    >
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <h2 class="modal__title section-title">
+          FREQUENTLY ASKED
+          <span class="highlight">QUESTIONS</span>
+        </h2>
+        <ul class="modal-faq__list">
+          <li class="modal-faq__item">
+            <h4 class="modal-faq__question">
+              What makes KAT loco different from other systems?
+              <span class="modal-faq__arrow"></span>
+            </h4>
+            <div class="modal-faq__answer">
+              <p class="modal-faq__answer--text">
+                Despite being approached from many different angles, all
+                traditional VR Locomotion systems including roomscale,
+                teleportation, and free locomotion failed to provide an optimal
+                solution capable of integrating high immersion with convenience.
+                KAT loco does all of that without repeating their flaws. Our
+                system offers a complete and versatile solution for an
+                affordable price what makes it a perfect choice for home-use. It
+                is also 100% user friendly, wireless, universally compatible,
+                and more! It even offers decoupled head and body directions!
+              </p>
+
+              <span class="modal-faq__answer--date">
+                Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+              </span>
+            </div>
+          </li>
+          <li class="modal-faq__item">
+            <h4 class="modal-faq__question">
+              Will it decrease my motion sickness?
+              <span class="modal-faq__arrow"></span>
+            </h4>
+            <div class="modal-faq__answer">
+              <p class="modal-faq__answer--text">
+                It is possible that the device or application could help reduce
+                motion sickness, depending on its features and how it manages
+                movement and visual feedback. Many modern VR headsets and apps
+                are designed to minimize motion sickness by improving frame
+                rates, reducing latency, and offering comfort settings such as
+                adjustable movement speeds or teleportation instead of free
+                movement. However, individual experiences with motion sickness
+                in VR can vary, so it might still be a good idea to start with
+                short sessions and gradually increase your usage to see how you
+                feel.
+              </p>
+
+              <span class="modal-faq__answer--date">
+                Last updated: Tue, May 12 2023 6:55 PM UTC +03:00
+              </span>
+            </div>
+          </li>
+          <li class="modal-faq__item">
+            <h4 class="modal-faq__question">
+              Which VR headsets is it compatible with?
+              <span class="modal-faq__arrow"></span>
+            </h4>
+            <div class="modal-faq__answer">
+              <p class="modal-faq__answer--text">
+                The device or application you're referring to is compatible with
+                various VR headsets, including Oculus Quest 2, Oculus Rift S,
+                HTC Vive Series, Valve Index, PlayStation VR, Windows Mixed
+                Reality headsets, Pimax headsets, and HP Reverb G2. However,
+                it's always recommended to check the specific product's
+                documentation or support page to confirm compatibility, as this
+                can vary by software or hardware version.
+              </p>
+
+              <span class="modal-faq__answer--date">
+                Last updated: Wed, June 13 2024 9:12 PM UTC +03:00
+              </span>
+            </div>
+          </li>
+          <li class="modal-faq__item">
+            <h4 class="modal-faq__question">
+              Is it compatible with Oculus Quest?
+              <span class="modal-faq__arrow"></span>
+            </h4>
+            <div class="modal-faq__answer">
+              <p class="modal-faq__answer--text">
+                Yes, it is compatible with Oculus Quest. Depending on the
+                specific product or software you're referring to, many VR
+                accessories, games, and applications are compatible with the
+                Oculus Quest. However, it's always best to double-check the
+                system requirements and compatibility for your specific device
+                or app to ensure optimal performance.
+              </p>
+
+              <span class="modal-faq__answer--date">
+                Last updated: Wed, June 15 2024 7:07 PM UTC +03:00
+              </span>
+            </div>
+          </li>
+        </ul>
+
+        <a
+          href="#section-more"
+          class="more-btn modal-faq__btn"
+          id="modal-more-btn"
+        >
+          More
+        </a>
+      </div>
+    </div>
+
+    <div class="order-modal">
+      <div class="order-modal__container container">
+        <div class="order-modal__top">
+          <a
+            href="#"
+            class="order-modal__logo"
+          >
+            <img
+              src="./images/logo.svg"
+              alt="Logo"
+            />
+          </a>
+
+          <div class="order-modal__lifecycle">
+            <p class="order-modal__lifecycle-step">Place Order</p>
+            <p class="order-modal__lifecycle-step">Pay</p>
+            <p class="order-modal__lifecycle-step">Order Complete</p>
+          </div>
+
+          <button class="order-modal__close"></button>
+        </div>
+        <div class="order-modal__progress">
+          <div class="order-modal__progress-step">Place Order</div>
+          <div class="order-modal__progress-step">Pay</div>
+          <div class="order-modal__progress-step">Order complete</div>
+        </div>
+
+        <div class="order-modal__content">
+          <div
+            id="placeOrderStep"
+            class="order-modal__content--active"
+          >
+            <div class="order-modal__product">
+              <img
+                src="./images/order-image.png"
+                alt="Order Image"
+                class="order-modal__product--image"
+              />
+              <div class="order-modal__summary">
+                <div class="order-modal__item">
+                  <label
+                    for="customDropdown"
+                    class="order-modal__label"
+                  >
+                    Quantity
+                  </label>
+                  <div
+                    class="custom-dropdown"
+                    id="customDropdown"
+                  >
+                    <div
+                      class="custom-dropdown__selected"
+                      id="dropdownSelected"
+                    >
+                      1
+                    </div>
+                    <ul
+                      class="custom-dropdown__list"
+                      id="dropdownList"
+                    >
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="1"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="2"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="3"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="4"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="5"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="6"
+                      >
+                        6
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="7"
+                      >
+                        7
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="8"
+                      >
+                        8
+                      </li>
+                      <li
+                        class="custom-dropdown__item"
+                        data-value="9"
+                      >
+                        9
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="order-modal__item">
+                  <span class="order-modal__label">Price</span>
+                  <span
+                    id="price"
+                    class="order-modal__price"
+                  >
+                    1200$
+                  </span>
+                </div>
+              </div>
+            </div>
+            <form
+              id="orderForm"
+              class="form-buy"
+            >
+              <div class="form-buy__field">
+                <label
+                  for="firstName"
+                  class="form-buy__label"
+                >
+                  First Name*
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  class="form-buy__input"
+                  required
+                />
+              </div>
+              <div class="form-buy__field">
+                <label
+                  for="lastName"
+                  class="form-buy__label"
+                >
+                  Last Name*
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-buy__input"
+                  required
+                />
+              </div>
+              <div class="form-buy__field">
+                <label
+                  for="email"
+                  class="form-buy__label"
+                >
+                  Email*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-buy__input"
+                  required
+                />
+              </div>
+              <div class="form-buy__field">
+                <label
+                  for="phone"
+                  class="form-buy__label"
+                >
+                  Phone Number*
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-buy__input"
+                  pattern="^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"
+                  title="Please enter a valid phone number (e.g., +380680305033, 068-030-50, or +1 (800) 555-1234)"
+                  required
+                />
+              </div>
+              <div class="form-buy__field">
+                <label
+                  for="countryDropdown"
+                  class="order-modal__label"
+                >
+                  Country*
+                </label>
+                <div
+                  class="custom-dropdown"
+                  id="countryDropdown"
+                >
+                  <div
+                    class="custom-dropdown__selected"
+                    id="countrySelected"
+                  >
+                    Ukraine
+                  </div>
+                  <ul
+                    class="custom-dropdown__list"
+                    id="countryDropdownList"
+                  >
+                    <li
+                      class="custom-dropdown__item"
+                      data-value="Italy"
+                    >
+                      Italy
+                    </li>
+                    <li
+                      class="custom-dropdown__item"
+                      data-value="Spain"
+                    >
+                      Spain
+                    </li>
+                    <li
+                      class="custom-dropdown__item"
+                      data-value="Poland"
+                    >
+                      Poland
+                    </li>
+                    <li
+                      class="custom-dropdown__item"
+                      data-value="USA"
+                    >
+                      USA
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-buy__field">
+                <label
+                  for="cityDropdown"
+                  class="order-modal__label"
+                >
+                  City*
+                </label>
+                <div
+                  class="custom-dropdown"
+                  id="cityDropdown"
+                >
+                  <div
+                    class="custom-dropdown__selected"
+                    id="citySelected"
+                  >
+                    Select City
+                  </div>
+                  <ul
+                    class="custom-dropdown__list"
+                    id="cityDropdownList"
+                  ></ul>
+                </div>
+              </div>
+
+              <div class="form-buy__field">
+                <label
+                  for="shipping-adress"
+                  class="form-buy__label"
+                >
+                  Shipping Adress*
+                </label>
+                <input
+                  class="form-buy__input"
+                  type="text"
+                  id="shipping-adress"
+                  name="shipping-adress"
+                  required
+                />
+              </div>
+
+              <div class="form-buy__field">
+                <label
+                  for="shipping-adress-2"
+                  class="form-buy__label"
+                >
+                  Shipping Adress 2
+                </label>
+                <input
+                  class="form-buy__input"
+                  type="text"
+                  id="shipping-adress-2"
+                  name="shipping-adress-2"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="purchaseButton"
+                class="form-buy__btn"
+              >
+                Purchase
+              </button>
+            </form>
+          </div>
+
+          <div
+            id="payStep"
+            class="order-modal__content--active payment-wrapper"
+          >
+            <div class="order-modal__product--payment">
+              <img
+                src="./images/order-image.png"
+                alt="Order Image"
+                class="order-modal__product--image"
+              />
+              <div class="order-modal__summary">
+                <div class="order-modal__item">
+                  <span class="order-modal__label">Quantity</span>
+                  <span
+                    id="selectedQuantity"
+                    class="order-modal__value"
+                  >
+                    1
+                  </span>
+                </div>
+                <div class="order-modal__item">
+                  <span class="order-modal__label">Price</span>
+                  <span
+                    id="selectedPrice"
+                    class="order-modal__price"
+                  >
+                    1200$
+                  </span>
+                </div>
+              </div>
+            </div>
+            <form
+              id="paymentForm"
+              class="form-payment"
+            >
+              <div class="form-payment__field form-payment__field--card">
+                <label
+                  for="card-number"
+                  class="form-payment__label"
+                >
+                  Card Number*
+                </label>
+                <div class="form-payment__card">
+                  <input
+                    class="form-payment__input form-payment__input--num"
+                    id="card-number"
+                    name="card-number-1"
+                    inputmode="numeric"
+                    placeholder="0000"
+                    maxlength="4"
+                    required
+                  />
+                  <input
+                    class="form-payment__input form-payment__input--num"
+                    name="card-number-2"
+                    inputmode="numeric"
+                    placeholder="0000"
+                    maxlength="4"
+                    required
+                  />
+                  <input
+                    class="form-payment__input form-payment__input--num"
+                    name="card-number-3"
+                    inputmode="numeric"
+                    placeholder="0000"
+                    maxlength="4"
+                    required
+                  />
+                  <input
+                    class="form-payment__input form-payment__input--num"
+                    name="card-number-4"
+                    inputmode="numeric"
+                    placeholder="0000"
+                    maxlength="4"
+                    required
+                  />
+                  <div class="form-payment--visa-icon"></div>
+                </div>
+              </div>
+              <div class="form-payment__field form-payment__field-holder">
+                <label
+                  for="card-name"
+                  class="form-payment__label"
+                >
+                  Card Holder Name*
+                </label>
+                <input
+                  type="text"
+                  id="card-name"
+                  class="form-payment__input"
+                  required
+                />
+              </div>
+
+              <div
+                class="form-payment__field form-payment__field--expiration-date"
+              >
+                <label
+                  for="expiry-date"
+                  class="form-payment__label"
+                >
+                  Expiration Date*
+                </label>
+                <input
+                  type="text"
+                  id="expiry-date"
+                  class="form-payment__input"
+                  pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                  title="Please enter a valid expiry date in MM/YY format (e.g., 05/24)"
+                  inputmode="numeric"
+                  maxlength="5"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="form-payment__field form-payment__field--cvv">
+                <label
+                  for="cvv"
+                  class="form-payment__label"
+                >
+                  CVV*
+                </label>
+                <input
+                  type="text"
+                  id="cvv"
+                  class="form-payment__input"
+                  placeholder="0 0 0"
+                  inputmode="numeric"
+                  maxlength="3"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="form-payment__btn"
+              >
+                Purchase
+              </button>
+            </form>
+          </div>
+
+          <div
+            id="orderCompleteStep"
+            class="order-modal__content--active"
+          >
+            <div class="order-modal__complete">
+              <h2 class="order-modal__complete-title section-title">
+                Thank you for
+                <span class="highlight">your</span>
+                order!
+              </h2>
+              <p class="order-modal__complete-text">
+                Your order has been placed and is being processed. You will
+                recive an email with the order details
+              </p>
+              <a
+                href="#"
+                class="order-modal__complete-back-btn"
+              >
+                Back to homepage
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

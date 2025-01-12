@@ -160,3 +160,26 @@
       0 0 20px $hover-bg-color inset;
   }
 }
+
+@mixin close-button($size: 18px, $icon-url: '../images/icons/close-icon.svg') {
+  @include set-size($size, $size);
+
+  position: absolute;
+  top: $size;
+  right: $size;
+  background: url($icon-url) no-repeat center;
+  cursor: pointer;
+
+  @include hover(transform, scale(1.2));
+}
+
+@mixin arrow-icon(
+  $width: 6px,
+  $height: 9px,
+  $icon-url: '../images/icons/arrow-icon.svg'
+) {
+  @include set-size($width, $height);
+
+  background: url($icon-url) no-repeat center;
+  transition: transform 0.3s ease;
+}

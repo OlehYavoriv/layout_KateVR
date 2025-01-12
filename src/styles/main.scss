@@ -2,6 +2,12 @@
 @import 'fonts';
 @import 'typography';
 
+.helper-links {
+  color: $robins-blue-color;
+
+  @include hover-color($hover-color: $white-color);
+}
+
 //  PAGE
 
 .page {
@@ -33,7 +39,7 @@
       opacity: 1;
       transform: translateX(0);
       pointer-events: all;
-      z-index: 30;
+      z-index: 805;
     }
   }
 }
@@ -388,33 +394,6 @@
           8px,
           0.3s
         );
-      }
-    }
-
-    &-more-btn {
-      @include flex(column, center, center);
-
-      color: $robins-blue-color;
-      font-weight: 500;
-
-      &::after {
-        @include set-size(0, 0);
-
-        content: '';
-        display: inline-block;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 6px solid $robins-blue-color;
-        margin-top: 10px;
-        transition: all 0.3s ease;
-      }
-
-      &:hover {
-        color: $white-color;
-
-        &::after {
-          border-top-color: $white-color;
-        }
       }
     }
 
@@ -1446,25 +1425,25 @@
     }
   }
 
-  &__contacts-list {
-    display: none;
+  // &__contacts-list {
+  //   display: none;
 
-    a {
-      @include hover-color($robins-blue-color);
+  //   a {
+  //     @include hover-color($robins-blue-color);
 
-      color: $gray-color;
-      font-size: 13px;
-      line-height: 15px;
-    }
+  //     color: $gray-color;
+  //     font-size: 13px;
+  //     line-height: 15px;
+  //   }
 
-    @include on-mobile {
-      display: flex;
-      flex-direction: column;
-      grid-column: 2;
-      margin-bottom: 22px;
-      gap: 12px;
-    }
-  }
+  //   @include on-mobile {
+  //     display: flex;
+  //     flex-direction: column;
+  //     grid-column: 2;
+  //     margin-bottom: 22px;
+  //     gap: 12px;
+  //   }
+  // }
 
   &__socials {
     &-list {
@@ -1504,7 +1483,7 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
+  z-index: 30;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -1538,11 +1517,11 @@
     background-position: center;
     cursor: pointer;
   }
-}
 
-.video-modal.show {
-  opacity: 1;
-  pointer-events: auto;
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .buy-btn {
@@ -1550,7 +1529,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 800;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.21) 0%,
@@ -1570,5 +1549,704 @@
 
   @include on-tablet {
     @include flex(row, center, center);
+  }
+}
+
+.more-btn {
+  @include flex(column, center, center);
+
+  color: $robins-blue-color;
+  font-weight: 500;
+
+  &::after {
+    @include set-size(0, 0);
+
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid $robins-blue-color;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: $white-color;
+
+    &::after {
+      border-top-color: $white-color;
+    }
+  }
+}
+
+//  CONTACT  LIST
+
+.contact-list {
+  &--footer {
+    display: none;
+
+    @include on-mobile {
+      display: flex;
+      grid-column: 2;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__items {
+    @include flex(column, flex-start, flex-start);
+
+    gap: 12px;
+
+    &--help {
+      gap: 25px;
+    }
+  }
+
+  &__link {
+    @include hover-color($robins-blue-color);
+
+    color: $gray-color;
+    font-size: 13px;
+    line-height: 15px;
+
+    &--help {
+      font-size: 16px;
+    }
+  }
+}
+
+//  MODAL DEFAULT
+
+.modal {
+  @include flex(row, center, center);
+
+  position: fixed;
+  inset: 0;
+  z-index: 830;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &__container {
+    max-width: 880px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 90px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    background: $haiti-color;
+    border-radius: 4px;
+
+    @include on-tablet {
+      max-width: 100%;
+      height: 100vh;
+      padding: 102px 34px;
+    }
+
+    @include on-mobile {
+      padding: 68px 20px;
+    }
+  }
+
+  &__close {
+    @include close-button;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include on-tablet {
+      margin-bottom: 30px;
+      font-size: 21px;
+    }
+  }
+
+  .modal-help {
+    &__description {
+      text-align: justify;
+      margin-bottom: 20px;
+
+      @include on-mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__support {
+      @include flex(row, flex-start, center);
+
+      gap: 65px;
+
+      .warranty-links {
+        &__list {
+          @include flex($direction: column);
+
+          gap: 20px;
+        }
+      }
+
+      @include on-mobile {
+        @include flex(column, flex-start, flex-start);
+
+        gap: 30px;
+      }
+    }
+  }
+
+  .modal-faq {
+    &__list {
+      @include flex($direction: column);
+
+      width: 100%;
+      overflow: hidden;
+      gap: 13px;
+    }
+    &__item {
+      border-radius: 4px;
+      border: 1px solid $robins-blue-color;
+      transition: box-shadow 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.7);
+      }
+    }
+
+    &__question {
+      @include flex(row, space-between, center);
+
+      padding: 18px;
+      cursor: pointer;
+      color: $robins-blue-color;
+
+      @include on-mobile {
+        padding: 18px 12px;
+      }
+    }
+
+    &__answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      transition:
+        max-height 1s ease,
+        padding 0.3s ease;
+
+      &--text {
+        margin-bottom: 20px;
+      }
+
+      &--date {
+        color: $emperor-color;
+        font-size: 14px;
+        line-height: 21px;
+
+        @include on-mobile {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      &.open {
+        max-height: 500px;
+        padding: 15px 20px;
+
+        @include on-mobile {
+          padding: 12px;
+        }
+      }
+    }
+
+    &__arrow {
+      @include arrow-icon;
+
+      @include on-tablet {
+        display: none;
+      }
+
+      &.open {
+        transform: rotate(90deg);
+      }
+    }
+
+    &__btn {
+      margin-top: 50px;
+
+      @include on-mobile {
+        display: none;
+      }
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+//  FULL SCREEN MODAL
+
+.order-modal {
+  background: linear-gradient(107.56deg, $haiti-color 0%, $black-color 100%);
+
+  @include set-size(100%, 100vh);
+
+  position: fixed;
+  inset: 0;
+  z-index: 830;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow: scroll;
+
+  &__progress {
+    display: none;
+
+    @include on-tablet {
+      @include flex($content: space-between);
+
+      margin-bottom: 30px;
+    }
+
+    &-step {
+      @include set-size(100%, 33px);
+
+      text-align: center;
+      font-weight: 500;
+      color: $emperor-color;
+      border-bottom: 1px solid $emperor-color;
+
+      &--current {
+        color: $robins-blue-color;
+        border-bottom: 1px solid $robins-blue-color;
+      }
+    }
+  }
+
+  &__container {
+    padding: 65px 110px;
+
+    @include on-tablet {
+      padding: 30px 34px;
+    }
+
+    @include on-mobile {
+      padding: 20px;
+    }
+  }
+
+  &__top {
+    @include flex(row, space-between, center);
+
+    grid-column: span 12;
+
+    margin-bottom: 102px;
+
+    @include on-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__close {
+    @include set-size(18px, 18px);
+
+    background: url(../images/icons/close-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &__lifecycle {
+    @include flex(row, space-between, center);
+
+    gap: 190px;
+
+    &-step {
+      font-size: 14px;
+      font-weight: 500;
+
+      &--active {
+        position: relative;
+        color: $robins-blue-color;
+
+        &::after {
+          @include set-size(4px, 4px);
+
+          content: '';
+          position: absolute;
+          top: calc(100% + 7px);
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          background-color: $robins-blue-color;
+        }
+      }
+    }
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+
+  &__content {
+    &--active {
+      @include page-grid;
+    }
+  }
+  &__product {
+    grid-column: span 5;
+
+    &--image {
+      @include set-size(100%, auto);
+
+      object-fit: contain;
+      margin-bottom: 32px;
+
+      @include on-tablet {
+        content: url(../images/order-image-tablet.png);
+        height: 277px;
+      }
+
+      @include on-mobile {
+        display: none;
+      }
+    }
+
+    &--payment {
+      grid-column: span 5;
+
+      @include on-tablet {
+        grid-column: 2/6;
+      }
+    }
+
+    @include on-tablet {
+      grid-column: span 6;
+    }
+
+    @include on-mobile {
+      grid-column: span 2;
+    }
+  }
+
+  &__summary {
+    @include flex(row, center, flex-start);
+
+    gap: 90px;
+
+    @include on-tablet {
+      @include flex(row, flex-start, flex-start);
+
+      gap: 150px;
+      margin-bottom: 48px;
+    }
+
+    @include on-mobile {
+      @include flex(row, center, flex-start);
+
+      gap: 75px;
+    }
+  }
+
+  &__item {
+    @include flex(column, flex-start, flex-start);
+  }
+  &__label {
+    margin-bottom: 20px;
+
+    @include on-mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price {
+    font-size: 36px;
+    font-weight: 500;
+    color: $robins-blue-color;
+  }
+
+  &__value {
+    display: block;
+    width: 100%;
+    color: $white-color;
+    padding: 10px;
+    background-color: $haiti-color;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  &__form {
+    grid-column: span 6 / -1;
+  }
+
+  &__complete {
+    grid-column: span 12;
+    text-align: center;
+
+    @include on-tablet {
+      grid-column: span 6;
+    }
+
+    @include on-mobile {
+      grid-column: span 2;
+    }
+    &-back-btn {
+      @include primary-button;
+    }
+    &-title {
+      margin-bottom: 36px;
+
+      @include on-tablet {
+        margin-bottom: 20px;
+      }
+
+      @include on-mobile {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 50px;
+
+      @include on-mobile {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.form-buy {
+  display: grid;
+  gap: 40px 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column: 7 / -1;
+
+  @include on-tablet {
+    grid-column: 1 / -1;
+  }
+
+  @include on-mobile {
+    @include flex($direction: column);
+
+    row-gap: 30px;
+  }
+
+  &__field {
+    @include flex($direction: column);
+
+    grid-column: span 3;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $gray-color;
+  }
+
+  &__input,
+  &__textarea {
+    color: $white-color;
+    padding-bottom: 6px;
+    background-color: transparent;
+    border-bottom: 1px solid $mine-shaft-color;
+    font-size: 16px;
+
+    &:-webkit-autofill {
+      transition:
+        background-color 5000s ease-in-out 0s,
+        color 5000s ease-in-out 0s;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $robins-blue-color;
+    }
+  }
+
+  &__btn {
+    @include primary-button;
+
+    grid-column: 1 / 4;
+    margin-top: 25px;
+
+    @include on-tablet {
+      grid-column: span 4 / -2;
+    }
+
+    @include on-mobile {
+      grid-column: span 2;
+      margin-top: 10px;
+    }
+  }
+  &__field:focus-within .form-buy__label {
+    color: $robins-blue-color;
+  }
+}
+
+.payment-wrapper {
+  @include on-mobile {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.form-payment {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column: 7/12;
+  grid-row: 1/2;
+  gap: 30px 20px;
+
+  @include on-tablet {
+    grid-column: 2 / 6;
+    grid-row: 2/2;
+  }
+
+  &__field {
+    &--card {
+      grid-column: 1 / -1;
+    }
+
+    &--expiration-date {
+      grid-column: 1 / 3;
+    }
+
+    &--cvv {
+      width: 50px;
+      grid-column: 3 / 4;
+    }
+
+    &-holder {
+      grid-column: 1 / -1;
+    }
+  }
+  &__label {
+    font-size: 14px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    color: $white-color;
+    letter-spacing: 0.2em;
+    background-color: transparent;
+    border-bottom: 1px solid $mine-shaft-color;
+    width: 100%;
+    padding: 5px 0;
+    transition: border-bottom 0.3s;
+    display: block;
+
+    &--num {
+      @include set-size(56px, 32px);
+
+      letter-spacing: 0.1em;
+      padding-bottom: 5px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    &:-webkit-autofill {
+      transition:
+        background-color 5000s ease-in-out 0s,
+        color 5000s ease-in-out 0s;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $robins-blue-color;
+    }
+  }
+
+  &__card {
+    @include flex($content: space-between);
+  }
+
+  &--visa-icon {
+    @include set-size(54px, 34px);
+
+    background-image: url(../images/icons/visa-icon.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: flex-end;
+    display: block;
+  }
+
+  &__btn {
+    @include primary-button;
+
+    grid-column: 1 / 4;
+
+    @include on-tablet {
+      grid-column: span 5;
+    }
+  }
+
+  &__field:focus-within .form-payment__label {
+    color: $robins-blue-color;
+  }
+}
+
+//  CUSTOM DROPDOWN
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  color: $white-color;
+
+  &__selected {
+    padding: 10px 24px;
+    background-color: $haiti-color;
+    border-radius: 4px;
+
+    &::after {
+      @include arrow-icon;
+
+      content: '';
+      position: absolute;
+      right: 10px;
+      top: 15px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: $haiti-color;
+    border-radius: 4px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid $gray-color;
+
+    &:hover {
+      background-color: $ebony-color;
+    }
   }
 }
